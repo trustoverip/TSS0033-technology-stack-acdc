@@ -1,0 +1,44 @@
+# Licensed under the Apache License, Version 2.0 (the "License"); you may not
+# use this file except in compliance with the License. You may obtain a copy
+# of the License at:
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING, SOFTWARE
+# DISTRIBUTED UNDER THE LICENSE IS DISTRIBUTED ON AN "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+# SEE THE LICENSE FOR THE SPECIFIC LANGUAGE GOVERNING PERMISSIONS AND
+# LIMITATIONS UNDER THE LICENSE.
+
+name: build
+on:
+  push:
+    branches:
+      - master
+      - main
+
+env:
+  PYTHON_VERSION: 3.x
+
+jobs:
+  build:
+    name: Build documentation
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python runtime
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Deploy documentation
+        run: |
+          mkdocs gh-deploy --force
+          mkdocs --version
