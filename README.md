@@ -1,4 +1,4 @@
-# ToIP TSS0033: Technology Stack Authentic Chained Data Containers (ACDC) Specification
+# ToIP TSS0033: Technology Stack Authentic Chained Data Container (ACDC) Specification
 - Authors: [Sam Smith](you@github-email) -- email is optional
 - Deliverable Type: *Spec - Technical* 
 - Status: [PROPOSED](./process/lifecycle_management.md)
