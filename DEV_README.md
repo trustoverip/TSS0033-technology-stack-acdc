@@ -1,181 +1,88 @@
-#  Contributor's Guide
-This document provides instructions for developing documentation and specifications using the **ToIP MkDocs Material Theme**.
+# ToIP Deliverables
 
-## Audience
-These instructions are pertinent to all ToIP contributors that seek to provide content towards the objective of this ToIP deliverable. Contributors may fall into one of the following categories:
+Under our Linux Foundation Joint Development Foundation (JDF) charter, each ToIP Foundation Working Group (WG) can produce a variety of [deliverable types](./content/process/work_products.md). This repo covers the [lifecycle management process](./content/process/lifecycle_management.md) for the work products ("deliverables") of the ToIP Foundation.
 
-| Role | Activities |
+Figure 1: The five (5) primary types of ToIP Foundation deliverables
+
+![deliverables](https://github.com/trustoverip/deliverables/blob/main/docs/_images/process/toip-deliverables.png)
+
+Table 1 summarizes the primary differences between these five types:
+
+| Deliverable Type | Designed to be:|
 | --- | --- |
-| Content Author | Use an editor of choice to write sections of the target deliverable using Markdown files as fragments of the ultimate deliverable document or specification. |
-| GitHub skilled developer | Github savvy contributor that collects Markdown files from other contributors and manages commits and pull-requests as a representative of the team of  contributors/ |
-| Both | Provider of content and manager of Github interactions. |
+| Specification | Implemented (in code)|
+| Glossary | Incorporated (in other documents) |
+| Recommendation | Followed (in practice) |
+| Guides | Executed (in operation) |
+| White Paper | Understood (to support decisions) |
 
-## Preparation
+Table 1: The primary differences between the six types of deliverables
 
-### Education
+## Purpose
+This repository serves several purposes:
 
-* [Markdown Tutorial](https://www.markdowntutorial.com/)
-* Markdown Documentation
-    * [Getting Started with Markdown](https://www.markdownguide.org/getting-started/)
-    * [Markdwon Basics](https://www.markdownguide.org/basic-syntax/)
-    * [Mastering the Markdown Language](https://guides.github.com/features/mastering-markdown/)
+1. Document and maintain the process information for contributing to the ToIP Foundation.
+2. Storage and version control for a subset of the Foundation's deliverables.
+3. Publication process for our [Deliverables Portal](https://trustoverip.github.io/deliverables), an interactive GitHub Pages website.
+4. Manages a list of [industry adoption activity](./lists/adoption.md).
 
-### Authoring Tools
+## Contributor's Guide
+Contributors of content for the ToIP Deliverables Portal  should familiarize themselves with the [Authoring Process](./DEV_README.md).
 
-* Markdown Converters for Word Processors
-    * MS-Word to Markdown
-        * [Word-to-Markdown](https://word2md.com/)
-        * [Writage](https://www.writage.com/)
-        * [How to convert Word Docs to Markdown](https://medium.com/@ravinduk369/convert-a-ms-word-document-to-markdown-e0e99c41cfab)
-    * Google Docs to Markdown
-        * [G-Suite Plugins](https://gsuite.google.com/marketplace/app/docs_to_markdown/700168918607)
-        * [How to convert Google Docs to Markdown](https://unslush.substack.com/p/how-to-convert-a-google-doc-to-markdown)
-* Integrated development environment (IDE)
-    * [Visual Studio](https://code.visualstudio.com/)
-    * [Atom](https://atom.io)
+## Related Resources
 
-## Setup Authoring Environment
+1. [ToIP Deliverables Portal - Status](https://trustoverip.github.io/deliverables/results/proposed/)
+2. [ToIP Contributor's Workflow](https://trustoverip.github.io/deliverables/process/process_concepts/)
 
-If you are a _Content Author_ and **will not** work with `git` or do local testing of the content you are contributing, you can IGNORE these setup instructions. However, you will need to coordinate with a fellow contributor who will incorporate your work for you.
+### Management of Deliverables
 
-### Install Dependencies
+#### Publication Categories
+Each deliverable produced by the ToIP Foundation may be rendered for publication in a variety of formats. There are two categories:
 
-| Required Software | MacOS Installation Instructions | Windows Installation Instructions |
+| Publication Category | Description | Format Options |
 | --- | --- | --- |
-| Docker | [Docker Desktop][1]| [Docker Desktop][1]|
-| `make` | Type `xcode-select --install` in a terminal window.|[Install Chocolatey Package Installer](https://chocolatey.org/install), then install [make via choco](https://chocolatey.org/packages/make)|
-| `git` | Type `xcode-select --install` in a terminal window OR [Git Installer][2] | [Git Installer][2]|
+| Basic | A work-product delivered in only one format. | Markdown |
+| Multi-Modal | A work-product delivered in multiple formats. | Markdown, PDF, HTML|
 
-  [1]: https://www.docker.com/products/docker-desktop
-  [2]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+>Note: Regardless of publication category, the authoring process may leverage more than one Markdown file to produce the final work-product.
 
-### Understanding Development Process
-This repo leverages standard *pull-request* code collaboration processing. Contributors to this repo should create a `fork` and then use that `fork` as the `origin `for their `local machine` based development environment.
+#### Publication Access
+This repo serves as the storage repository for work-products within the **Basic** publication category. These work-products can be found in the ```recommendations``` folder.
 
-![remote-upstream](https://i.stack.imgur.com/cEJjT.png)
+Each work-product within the **Multi-Modal** publication category will have a dedicated repository within the [ToIP Github Organization](https://github.com/trustoverip/) with unique publication process details.
 
-Learn more about [GitHub Forks](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo).
+### Portal Development  
+This repo contains the content resources for the generation of documentation associated with the contribution process and state of our deliverables. It contains the tools necessary to generate this documentation in two rendering formats (printed, online). Please refer to our [Portal Build Process](./content/process/build_processs.md) for more details.
 
-### Deployment
-This repository contains a GitHub Action workflow that will automatically deploy your generated content when you commit your changes to:
+## Getting Started with the ToIP Foundation
+The ToIP Foundation maintains a variety of active and inactive activities that adhere to a specific process for the maturation and publication of deliverables that are relevant to:
 
-```
-https://trustoverip.github.io/<repository_name>
-```
+* Work within the same working group
+* Work within another working group
+* Work within another community or [SDO](https://en.wikipedia.org/wiki/Standards_organization#Standards_developing_organizations_(SDOs))
 
-When you're forking this repository, you may need to activate GitHub Actions for your fork, as GitHub disables them by default. This is as easy as clicking on __Actions__ in the top bar of your repository and clicking the button that is shown. If no button is shown, you're good to go.
+There are several ways in which you can get acquainted with our work.
 
-### Local Development Process
-This repository uses simple `make` commands to manage the building and testing of content for this repo.
+### Learn
+If you are here to explore the work products of the ToIP Foundation, we recommend you refer to the *Deliverables Results* section of our [Deliverables Portal](https://trustoverip.github.io/deliverables/results/proposed/) as it provides a current listing of all work product efforts and their statuses.
 
-Open a Terminal Window and enter this command:
+### Contribute
+If you have an idea for a new instance of one of our types of deliverables, please consider making a contribution:
 
-```
-$ make
-```
+* [Contribute a Specification](./content/process/contributing_specs.md)
+* [Contribute a Other Work-Products](./content/process/contributing_other.md)
 
-#### Prepare Development Environment
+### Consume
+The goal of the ToIP Foundation is to help define a complete architecture for Internet-scale digital trust that combines both cryptographic trust at the machine layer and human trust at the business, legal, and social layers. Our work products with be positioned at various levels of such an architecture and will mature at disparate rates. Please familiar yourself with the [lifecycle management process](./content/process/lifecycle_management.md) for our deliverables and then when/where appropriate we welcome your feedback on how you plan or have consumed our work. Please keep us informed of your activities by submitted a `pull-request` against our [adoption matrix](./lists/adoption.md).
 
-1. Clone repository
+## About
 
-    ```
-    cd <path>/<target_work_folder>
-    git clone REPO_LINK
-    git remote
-    ```
+#### License
 
-2. Setup Environment
-Now we will establish your upstream connections and build the necessary Docker containers for our development environment.
+This repository is licensed under an [Apache 2 License](LICENSE). It is protected by a [Developer Certificate of Origin](https://developercertificate.org/) on every commit. This means that any contributions you make must be licensed in an Apache-2-compatible
+way, and must be free from patent encumbrances or additional terms and conditions. By raising a PR, you certify that this is the case for your contribution.
 
-```
-$ make setup
-```
+#### Acknowledgement
 
-#### Develop content
-_Optional_: You can skip these steps and jump to iterative development and testing.
-
-1.  Launch the development environment
-
-```
-$ make devenv
-$bash$
-```
-
-Your terminal prompt will now be within the docker container environment.
-
-2. Iteratively develop documentation content by editing the markdown files and repeating the following command which will generate static HTML content and show any errors/warnings you may want to resolve.
-
-```
-$bash$ make dev
-```
-
-3. Exit the development environment (container)
-
-```
-$bash$ exit
-$
-```
-
-#### Iterative development and testing
-1.  Launch the development environment
-
-```
-$ make devenv
-$bash$
-```
-
-Your terminal prompt will now be within the docker container environment.
-
-2. Launch the Test Server
-
-```
-$bash$ make test
-```
-
-3. Iteratively develop documentation content by editing the markdown files. Each time you save a file, the test server will automatically refresh content for your review using your web browser pointed at: [localhost](localhoat:8800). See your `Makefile` for actual PORT number.
-
-3. Exit the Develop and Test environment (container)
-
-```
-Enter <control-c> to halt the test server
-
-$bash$ exit
-$
-```
-
-#### Generate HTML and PDF Docs
-This repo will combine all contributed content into a single Markdown file which is then used to produce standalone HTML and  PDF files. Internal scripts will preprocess and concatenate all Markdown files in the order specified in `mkdocs.yml`. The scripts will ensure that internal links to pages and anchors are correct.
-
-1. Launch the Publish Environment
-
-```
-$ make pubenv
-$bash$
-```
-
-Your terminal prompt will now be within the docker container environment.
-
-2. Run the publishing process which will generate various versions of the contnet in the `./publish` folder.
-
-```
-$bash$ make publish
-```
-
-3. Exit the publishing environment (container)
-
-```
-Enter <control-c> to halt the test server
-
-$bash$ exit
-$
-```
-
-#### Commit Code
-To complete the development process, follow normal **git commit** and **git push** processing. The ```.gitignore``` file will prevent the pushing of the static HTML content.
-
-#### Resync with Upstream
-Before each coding session, ensure your ```fork``` and ```local-machine``` are in sync with changes made to the ```upstream``` repo.
-
-```
-$ make rebase
-```
+This repo was derived from the [ToIP Material for MkDocs Repo](https://github.com/trustoverip/mkdocs-material). It was inspired by the structure and successful experience of the [Hyperledger/Aries-RFC Repository](https://github.com/hyperledger/aries-rfcs), which was in part based on [Indy HIPEs](
+https://github.com/hyperledger/indy-hipe), which borrowed it from [Rust RFC](https://github.com/rust-lang/rfcs).
