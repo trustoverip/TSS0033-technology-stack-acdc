@@ -36,14 +36,14 @@ TODO: mention about informative example used across whole spec
 
 
     {
-    id: "did:1209u091u9012d/attestation/1234",
+    id: "did:1209u091u9012d/attestation/1234",  // SAI
     tid: "did:1209u091u9012d",
     s: [
             id: "User1234", tid: "did:jd892j108jd1029",
             id: "did:9d9j109j1d902dj19/attestation/3242",
             id: "did:h78h8d2h8d2h8hd28d/attestation/1234"
     ]
-    schema: {} || DRI
+    schema: {} || SAI
     d: {
         k: v
         k1: #ref1
