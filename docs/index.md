@@ -36,20 +36,22 @@ TODO: mention about informative example used across whole spec
 
 
     {
-    id: "did:1209u091u9012d/attestation/1234",  // SAI
-    tid: "did:1209u091u9012d",
-    s: [
-            id: "User1234", tid: "did:jd892j108jd1029",
-            id: "did:9d9j109j1d902dj19/attestation/3242",
-            id: "did:h78h8d2h8d2h8hd28d/attestation/1234"
-    ]
-    schema: {} || SAI
-    d: {
-        k: v
-        k1: #ref1
-        consent: {}
-    }
-    consent: {}
+       id: "did:1209u091u9012d/attestation/1234",  // SAI
+       tid: "did:1209u091u9012d",
+       s: 
+       [
+            id: "attestationID1234", tid: "did:jd892j108jd1029", // attestation id not in namespace of testator
+            id: "did:9d9j109j1d902dj19/attestation/3242",  // attestation id in namespace of testator
+            id: "did:h78h8d2h8d2h8hd28d/attestation/1234"  // attestation id in namespace of testator
+        ]
+        schema: {}, || SAI
+        d: 
+        {
+           k: v
+           k1: #ref1
+         }, || SAI
+         r: {}  || SAI
+     }
 
 
 
@@ -59,7 +61,7 @@ TODO: mention about informative example used across whole spec
 - `dd` (optional) - Datum DRIs (Decentralized Resource Identifier). An array of objects identifiers which refers to Datum Decentralized Identifiers - unique identifier of immutable datum and schema DRI.
 - `schema` (optional) - schema DRI, DRI of the schema describing semantic of the data
 - `cd` (optional) - consent schema DRI, schema describing consent data linked to attestation
-- `c` (optional) - datum of consent/license/rules/data agreement under which data are shared.
+- `r` (optional) - datum of rules/delegation/consent/license/data agreement under which data are shared.
 
 ### Versioning
 
