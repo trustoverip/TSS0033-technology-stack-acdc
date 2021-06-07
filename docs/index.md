@@ -44,7 +44,7 @@ TODO: mention about informative example used across whole spec
             id: "did:9d9j109j1d902dj19/attestation/3242",  // attestation id in namespace of testator
             id: "did:h78h8d2h8d2h8hd28d/attestation/1234"  // attestation id in namespace of testator
         ],
-        schema: {}, || SAI
+        x: {}, || SAI
         d: 
         {
            k: v
@@ -59,7 +59,7 @@ TODO: mention about informative example used across whole spec
 - `tid` (optional) - Testator Identifier. Required if the attestation datum id (`id`) is not within the namespace of the testator identifier. Testator is a person who attest to `Datum`. Testator ID is identifier of the Testator. Preferable DID but it can be any type of the identifier which provides possibility to sign digital content.
 - `s` (optional) - sources to which attestation is linked to
 - `dd` (optional) - Datum DRIs (Decentralized Resource Identifier). An array of objects identifiers which refers to Datum Decentralized Identifiers - unique identifier of immutable datum and schema DRI.
-- `schema` (optional) - schema DRI, DRI of the schema describing semantic of the data
+- `x` (optional) - schema DRI, DRI of the schema describing semantic of the data
 - `cd` (optional) - consent schema DRI, schema describing consent data linked to attestation
 - `r` (optional) - datum of rules/delegation/consent/license/data agreement under which data are shared.
 
