@@ -43,7 +43,7 @@ TODO: mention about informative example used across whole spec
             id: "attestationID1234", tid: "did:jd892j108jd1029", // attestation id not in namespace of testator
             id: "did:9d9j109j1d902dj19/attestation/3242",  // attestation id in namespace of testator
             id: "did:h78h8d2h8d2h8hd28d/attestation/1234"  // attestation id in namespace of testator
-        ]
+        ],
         schema: {}, || SAI
         d: 
         {
