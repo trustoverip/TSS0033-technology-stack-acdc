@@ -47,8 +47,8 @@ TODO: mention about informative example used across whole spec
         x: {}, || SAI
         d: 
         {
-           k: v
-           k1: #ref1
+           k: v,
+           k1: SAI,  // ref1
          }, || SAI
          r: {}  || SAI
      }
