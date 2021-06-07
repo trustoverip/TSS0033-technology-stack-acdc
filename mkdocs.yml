@@ -11,7 +11,7 @@
 # LIMITATIONS UNDER THE LICENSE.
 
 # Project information
-site_name: Trust over IP – General Template
+site_name: "TSS0033"
 site_url: https://trustoverip.github.io/mkdocs-material/
 site_author: Trust over IP Foundation
 site_description: >-
@@ -34,9 +34,9 @@ copyright: >-
   Projects, LLC is an affiliate of the Linux Foundation.
 
 # Navigation structure
-# nav:
-#  - Page 1: page-1.md
-#  - Page 2: page-2.md
+nav:
+  - Authentic Chained Data Container: index.md
+
 
 # Theme configuration
 theme:
@@ -98,7 +98,7 @@ markdown_extensions:
 
 # Additional content
 extra:
-  title: 'XX0000: Deliverable Name'
+  title: 'TSS0033: Technology Stack Authentic Chained Data Container'
   lf_url: https://www.linuxfoundation.org/projects
   toip_url: https://trustoverip.org/
   social:
