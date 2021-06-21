@@ -12,7 +12,7 @@ TODO
 
 ## Terminology
 
-- `SAI` - Self-Addressing Identifier - any identifier which is deterministaclly generated out of the content, digest of the content
+- `SAID` - Self-Addressing Identifier - any identifier which is deterministaclly generated out of the content, digest of the content
 
 
 ## Specification
@@ -36,7 +36,7 @@ TODO: mention about informative example used across whole spec
 
 
     {
-       i: "did:1209u091u9012d/attestation/1234",  // SAI
+       i: "did:1209u091u9012d/attestation/1234",  // SAID
        ti: "did:1209u091u9012d",
        s: 
        [
@@ -44,13 +44,13 @@ TODO: mention about informative example used across whole spec
             id: "did:9d9j109j1d902dj19/attestation/3242",  // attestation id in namespace of testator
             id: "did:h78h8d2h8d2h8hd28d/attestation/1234"  // attestation id in namespace of testator
         ],
-        x: {}, || SAI
+        x: {}, || SAID
         d: 
         {
            k: v,
-           k1: SAI,  // ref1
-         }, || SAI
-         r: {}  || SAI
+           k1: SAID,  // ref1
+         }, || SAID
+         r: {}  || SAID
      }
 
 
@@ -71,6 +71,7 @@ TODO: mention about informative example used across whole spec
 - [2] https://github.com/THCLab/keri-python-ffi/tree/supply_chain
 - [3] https://hackmd.io/rnY5xiXESWqWBlyDPHDorA?view
 - [4] https://github.com/THCLab/keri-python-ffi/tree/supply_chain
+- [5] https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/VC_Enhancement_Strategy.md
 
 ## Apendix
 
