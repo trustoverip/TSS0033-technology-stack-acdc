@@ -81,7 +81,7 @@ TODO: mention about informative example used across whole spec
 ### ACDC as Verifiable Labeled Property Graph Fragment
 The structure of an ACDC may be modeled as a fragment of a Labeled Property Graph. The `s` block is an array of edges and the 'd' block is the node. The remainder of the ACDC is metadata about the node that may also be included as part of the node properties. Because, the edges in labeled property graphs may also have labeled properties, a more aligned representation would make each source entry a labeled block (or at least as an option). This is illustrated in the following example:
 
-```JSON
+```
 
     {
        i: "did:1209u091u9012d/attestation/1234",  // SAID
