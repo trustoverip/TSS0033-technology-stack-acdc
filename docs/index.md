@@ -6,7 +6,7 @@ Authentic Chained Data Containers (ACDC) let formal assertions about data be cha
 
 ## Motivation
 
-Digital signatures let us prove who said what. This is extremely valuable. However, it is often the case that a party who says something is just repeating data that they themselves received from someone else. This indirection may change the reliability of the data, and its effects in complex knowledge graphs. Many real-world use cases require us to model this indirection. For example:
+Digital signatures let us prove who said what. This is extremely valuable. However, it is often the case that a party who says something is just repeating data that they themselves received from someone else. This indirection may change the reliability of the data, as well as its effects in complex knowledge graphs. Many real-world use cases require us to model this indirection. For example:
 
 * Supply chain, where a valid transfer of custody downstream depends on the validity of all upstream handoffs.
 * Delegation, where a delegate's privileges derive from a chain of authorizations that must extend back to a valid root authority.
