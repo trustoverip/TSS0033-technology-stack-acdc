@@ -78,6 +78,32 @@ TODO: mention about informative example used across whole spec
 - `cd` (optional) - consent schema DRI, schema describing consent data linked to attestation
 - `r` (optional) - datum of rules/delegation/consent/license/data agreement under which data are shared.
 
+### ACDC as Verifiable Labeled Property Graph Fragment
+The structure of an ACDC may be modeled as a fragment of a Labeled Property Graph. The `s` block is an array of edges and the 'd' block is the node. The remainder of the ACDC is metadata about the node that may also be included as part of the node properties. Because, the edges in labeled property graphs may also have labeled properties, a more aligned representation would make each source entry a labeled block (or at least as an option). This is illustrated in the following example:
+
+```JSON
+
+    {
+       i: "did:1209u091u9012d/attestation/1234",  // SAID
+       ti: "did:1209u091u9012d",
+       s: 
+       [
+            {sourcEdgeLabel: {id: "did:kdjflkeje", tid: "did:jd892j108jd1029", ...}}, // attestation id not in namespace of testator
+            {anotherSourceEdgeLabel: {id: "did:9d9j109j1d902dj19/attestation/3242", ...}},  // attestation id in namespace of testator
+            {yetAnotherSourceEdgeLabel: {id: "did:h78h8d2h8d2h8hd28d/attestation/1234",...}}  // attestation id in namespace of testator
+        ],
+        x: {}, || SAID
+        d: 
+        {
+           k: v,
+           k1: SAID,  // ref1
+         }, || SAID
+         r: {}  || SAID
+     }
+
+
+```
+
 ### Versioning
 
 
