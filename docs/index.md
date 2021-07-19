@@ -88,13 +88,14 @@ The structure of an ACDC may be modeled as a fragment of a Labeled Property Grap
        ti: "did:1209u091u9012d",
        s: 
        [
-            {sourcEdgeLabel: {id: "did:kdjflkeje", tid: "did:jd892j108jd1029", ...}}, // attestation id not in namespace of testator
-            {anotherSourceEdgeLabel: {id: "did:9d9j109j1d902dj19/attestation/3242", ...}},  // attestation id in namespace of testator
-            {yetAnotherSourceEdgeLabel: {id: "did:h78h8d2h8d2h8hd28d/attestation/1234",...}}  // attestation id in namespace of testator
+            {sourcEdgeLabel: {i: "did:kdjflkeje", tid: "did:jd892j108jd1029", ...}}, // attestation id not in namespace of testator
+            {anotherSourceEdgeLabel: {i: "did:9d9j109j1d902dj19/attestation/3242", ...}},  // attestation id in namespace of testator
+            {yetAnotherSourceEdgeLabel: {i: "did:h78h8d2h8d2h8hd28d/attestation/1234",...}}  // attestation id in namespace of testator
         ],
         x: {}, || SAID
         d: 
         {
+           i: "SAID",
            k: v,
            k1: SAID,  // ref1
          }, || SAID
