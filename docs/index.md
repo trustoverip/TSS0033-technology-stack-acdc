@@ -4,11 +4,27 @@
 
 Authentic Chained Data Containers (ACDC) Standard Specification provides semantic of authentic provenance chaining of authentic data containers. This semantics include both source provenance and authorization provenance or delegation.
 
-TODO: short motivation
+## Motivation
+
+We need a way to chain authentic data together, allowing its provenance to be traced. This is valuable in many use cases:
+
+* Supply chain, where a valid transfer of custody downstream depends on the validity of all upstream handoffs.
+* Delegation, where a delegate's privileges derive from a chain of authorizations that must extend back to a source that is empowered.
+* Citation of sources (in art, in journalism, in academia, or in credential issuance), where an author wants to clarify that a particular assertion originates elsewhere. This allows the assertion to acquire (or lose) gravitas independent of the reputation of the author who includes it. It also allows analysis of license compliance.
+
+The last of these examples deserves special comment. There is a tension between the decentralization that we want in a verifiable credential ecosystem, and the way that trust tends to centralize because knowledge and reputation are unevenly distributed. We want anyone to be able to attest to anything they like--but we know that verifiers care very much about the reputation of the parties that make those attestations.
+
+We could say that verifiers will choose which issuers they trust. This is exactly what most practioners of VCs recommend, and it works in early pilots. However, this places a heavy burden on verifiers, over the long haul--verifiers can't afford to vet every potential issuer of credentials they might encounter. The result will be a tendency to accept credentials only from a short list of issuers, which leads back to centralization.
+
+This tendency also creates problems with delegation. If all delegation has to be validated through a few authorities, a lot of the flexibility and power of delegation is frustrated.
+
+We'd like a landscape where a tiny startup can issue an employment credential with holder attributes taken as seriously as one from a massive global conglomerate--and with no special setup by verifiers to trust them equally. And we'd like parents to be able to delegate childcare decisions to a babysitter on the spur of the moment--and have the babysitter be able to prove it when she calls an ambulance.
 
 ## Scope
 
-TODO
+This document describes a mechanism whereby assertions about data can be provenanced in a provably authentic chain. Evaluating the integrity of the chain is in scope -- and because such chains leads to one or more root sources, the chain provides the raw material for making judgments about the data's utility or probable veracity. However, evaluating the data's utility or veracity is out of scope.
+
+In other words, this standard concerns itself with proving that party C got its data in a valid way from party B, who in turn got it from party A. The degree to which the origin party, A, is trustworthy in their assertions about reality is not our concern.
 
 ## Terminology
 
