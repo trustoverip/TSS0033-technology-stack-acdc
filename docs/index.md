@@ -79,7 +79,7 @@ TODO: mention about informative example used across whole spec
 - `r` (optional) - datum of rules/delegation/consent/license/data agreement under which data are shared.
 
 ### ACDC as Verifiable Labeled Property Graph Fragment
-The structure of an ACDC may be modeled as a fragment of a Labeled Property Graph. The `s` block is an array of edges and the 'd' block is the node. The remainder of the ACDC is metadata about the node that may also be included as part of the node properties. Because, the edges in labeled property graphs may also have labeled properties, a more aligned representation would make each source entry a labeled block (or at least as an option). This is illustrated in the following example:
+The structure of an ACDC may be modeled as a fragment of a Labeled Property Graph. The `s` block is an array of edges and the `d` block is the node. The remainder of the ACDC may be metadata about the node that may also be included as special node properties. Because, the edges in labeled property graphs may also have labeled properties, a more aligned representation would make each source entry a labeled block (or at least as an option). This is illustrated in the following example:
 
 ```
 
