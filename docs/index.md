@@ -104,6 +104,8 @@ The structure of an ACDC may be modeled as a fragment of a Labeled Property Grap
 
 ```
 
+Because each ACDC thus composed is verifiable, a verifiable graph may be communicated via verifiable graph fragments. Given any starting node or root node in the graph, one may add onto the graph by communicating graph fragments where each fragment includes a new node and the edge or edges that connect it to one or more pre-existing nodes.  The over-the-wire communication of the fragment is secured by the immutability of the ACDC contexts and the signature or committment proofs on the fragment.  This drives the structure of ACDCs to be graph fragments not graphs in and of themselves.  The semantics of who issues or testates to a fragment and who the fragment is issued to (if any) may vary. With an issuer and isuee then the fragment can be an authorization or delegation. If the isuee is the node itself then the fragment is just provenanced data in a provenanced graph.
+
 ### Versioning
 
 
