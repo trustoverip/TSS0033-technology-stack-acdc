@@ -28,7 +28,7 @@ In other words, this standard concerns itself with proving that party C got its 
 
 ## Terminology
 
-- `SAID` - Self-Addressing Identifier - any identifier which is deterministaclly generated out of the content, digest of the content
+- `SAID` - Self-Addressing Identifier - any identifier which is deterministcally generated out of the content, digest of the content
 
 
 ## Specification
@@ -42,9 +42,24 @@ implementation standard specification. The current targeted concrete implementat
 
 TODO: mention about informative example used across whole spec
 
-### Security guaranties
+### Security guarantees
 
-### Privacy guaranties
+Secure attribution may be a cover term for non-repudiation + (discovery?) + structural integrity + semantic integrity.
+
+1. Non-repudiation: An assertion can be attributed to its source (the beginning of the chain, including all the links in the chain) with confidence. (Is there some sense of discoverability here -- not just non-repudiability, but ability to find out who said something in the first place?)
+1. Structural Integrity: Data is cannot be changed after it is created.
+1. Semantic (too broad) Integrity: The meaning of data that was intended by its creator cannot be changed by external context after it is made. (meaning of fields)
+    1. Data use integrity: the rules about how data may be used are not modifiable and are enforced. 
+
+(how to work rules into this?)
+
+SAID changes from integrity to availability problem
+
+### Privacy and Confidentiality Guarantees
+
+1. The evaluation of data veracity is not dependent on the reputation of parties that only report what someone else said (don't do transforms on data; don't add weights to LPG).
+1. All parties other than the ultimate source can be "chain-pseudonymous" (attributable identifier [AID] with key state) with respect to those who consume a chain.
+1. The recipient of an ACDC presentation can be bound to terms of service that include confidentiality constraints. (See paper called "Chain Link Confidentiality" by Stanford professor.)
 
 ### Normative model
 
