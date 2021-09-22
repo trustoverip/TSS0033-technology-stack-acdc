@@ -74,8 +74,8 @@ TODO: mention about informative example used across whole spec
 - `i` - identifier, which can be designated by Testator to uniquely track specific attestation. ADID is always within namespace of the Testator Identifier making it always globally unique.
 - `ti` (optional) - Testator Identifier. Required if the attestation datum id (`i`) is not within the namespace of the testator identifier. Testator is a person who attest to `Datum`. Testator ID is identifier of the Testator. Preferable DID but it can be any type of the identifier which provides possibility to sign digital content.
 - `s` (optional) - sources to which attestation is linked to
-- `x` (optional) - schema DRI, DRI of the schema describing semantic of the data
-- `cd` (optional) - consent schema DRI, schema describing consent data linked to attestation
+- `x` (optional) - schema SAI, SAI of the schema describing semantic of the data
+- `cd` (optional) - consent schema SAI, schema describing consent data linked to attestation
 - `r` (optional) - datum of rules/delegation/consent/license/data agreement under which data are shared.
 
 ### ACDC as Verifiable Labeled Property Graph Fragment
