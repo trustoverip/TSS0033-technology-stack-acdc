@@ -51,49 +51,63 @@ TODO: mention about informative example used across whole spec
 ### Informative Example
 
 
+```
+{
+  "v": "ACDC10JSON00011c_",
+  "d": "EBdXt3gIXOf2BBWNHdSXCJnFJL5OuQPyM5K0neuniccM",
+  "i": "did:keri:EmkPreYpZfFk66jpf3uFv7vklXKhzBrAqjsKAn2EDIPM",
+  "s": "E46jrVPTzlSkUPqGGeIZ8a8FWS7a6s4reAXRZOkogZ2A",
+  "a": {
+    "d": "EgveY4-9XgOcLxUderzwLIr9Bf7V_NHwY1lkFrn9y2PY",
+    "i": "did:keri:EQzFVaMasUf4cZZBKA0pUbRc9T8yUXRFLyM1JDASYqAA",
+    "dt": "2021-06-09T17:35:54.169967+00:00",
+    "ri": "did:keri:EymRy7xMwsxUelUauaXtMxTfPAMPAI6FkekwlOjkggt",
+    "LEI": "254900OPPU84GM83MG36",
+  },
+  "p": [
     {
-       i: "did:1209u091u9012d/attestation/1234",  // SAID
-       ti: "did:1209u091u9012d",
-       s: 
-       [
-            id: "attestationID1234", tid: "did:jd892j108jd1029", // attestation id not in namespace of testator
-            id: "did:9d9j109j1d902dj19/attestation/3242",  // attestation id in namespace of testator
-            id: "did:h78h8d2h8d2h8hd28d/attestation/1234"  // attestation id in namespace of testator
-        ],
-        x: {}, || SAID
-        d: 
-        {
-           k: v,
-           k1: SAID,  // ref1
-         }, || SAID
-         r: {}  || SAID
-     }
+      "qualifiedvLEIIssuervLEICredential": {
+        "d": "EIl3MORH3dCdoFOLe71iheqcywJcnjtJtQIYPvAu6DZA",
+        "i": "Et2DOOu4ivLsjpv89vgv6auPntSLx4CvOhGUxMhxPS24"
+      }
+    }
+  ],
+  "r": [
+    {
+      "usageDisclaimer": "Usage of a valid Legal Entity vLEI Credential does not assert that the Legal Entity is trustworthy, honest, reputable in its business dealings, safe to do business with, or compliant with any laws."
+    },
+    {
+      "issuanceDisclaimer": "Issuance of a valid Legal Entity vLEI Credential only establishes that the information in the requirements in the Identity Verification section 6.3 of the Credential Governance Framework were met in accordance with the vLEI Ecosystem Governance Framework."
+    }
+  ]
+}
 
+```
 
-
-- `i` - identifier, which can be designated by Testator to uniquely track specific attestation. ADID is always within namespace of the Testator Identifier making it always globally unique.
-- `ti` (optional) - Testator Identifier. Required if the attestation datum id (`i`) is not within the namespace of the testator identifier. Testator is a person who attest to `Datum`. Testator ID is identifier of the Testator. Preferable DID but it can be any type of the identifier which provides possibility to sign digital content.
-- `s` (optional) - sources to which attestation is linked to
-- `x` (optional) - schema DRI, DRI of the schema describing semantic of the data
-- `cd` (optional) - consent schema DRI, schema describing consent data linked to attestation
-- `r` (optional) - datum of rules/delegation/consent/license/data agreement under which data are shared.
+- `v` version string of ACDC
+- `d` SAID of ACDC.
+- `i` Attributable Source Identifier (Issuer, Testator). 
+- `s` Schema SAID
+- 'a' Attributes
+- `p` Provenance chain
+- `r` Rules rules/delegation/consent/license/data agreement under which data are shared.
 
 ### ACDC as Verifiable Labeled Property Graph Fragment
-The structure of an ACDC may be modeled as a fragment of a Labeled Property Graph. The `s` block is an array of edges and the `d` block is the node. The remainder of the ACDC may be metadata about the node that may also be included as special node properties. Because, the edges in labeled property graphs may also have labeled properties, a more aligned representation would make each source entry a labeled block (or at least as an option). This is illustrated in the following example:
+The structure of an ACDC may be modeled as a fragment of a Labeled Property Graph. The `p` block is an array of edges and the `a` block is the node. The remainder of the ACDC may be metadata about the node that may also be included as special node properties. Because, the edges in labeled property graphs may also have labeled properties, a more aligned representation would make each source entry a labeled block (or at least as an option). This is illustrated in the following example:
 
 ```
 
     {
-       i: "did:1209u091u9012d/attestation/1234",  // SAID
-       ti: "did:1209u091u9012d",
-       s: 
+       d: "did:1209u091u9012d/attestation/1234",  // SAID
+       i: "did:1209u091u9012d",
+       p: 
        [
             {sourcEdgeLabel: {i: "did:kdjflkeje", tid: "did:jd892j108jd1029", ...}}, // attestation id not in namespace of testator
             {anotherSourceEdgeLabel: {i: "did:9d9j109j1d902dj19/attestation/3242", ...}},  // attestation id in namespace of testator
             {yetAnotherSourceEdgeLabel: {i: "did:h78h8d2h8d2h8hd28d/attestation/1234",...}}  // attestation id in namespace of testator
         ],
-        x: {}, || SAID
-        d: 
+        s: {}, || SAID
+        a: 
         {
            i: "SAID",
            k: v,
