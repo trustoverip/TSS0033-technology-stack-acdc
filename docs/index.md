@@ -4,6 +4,9 @@
 
 Authentic Chained Data Containers (ACDC) Standard Specification provides semantic of authentic provenance chaining of authentic data containers. This semantics include both source provenance and authorization provenance or delegation.
 
+## Status
+Draft v0.1
+
 ## Motivation
 
 We need a way to chain authentic data together, allowing its provenance to be traced. This is valuable in many use cases:
