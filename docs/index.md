@@ -124,7 +124,7 @@ Because each ACDC thus composed is verifiable, a verifiable graph may be communi
 
 ### Normative model
 
-
+### OCA Model Version of Field Labels
 
 ### Versioning
 
