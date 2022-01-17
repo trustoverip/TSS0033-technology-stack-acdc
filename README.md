@@ -15,7 +15,7 @@ The purpose of the Authentic Chained Data Container (ACDC) Task Force  is to dra
 ## Motivation
 
 ```Why are we doing this? What use cases does it support? What is the expected outcome?
-DELETE THIS COMMENT
+Todo
 ```
 
 ## Scope
@@ -24,11 +24,10 @@ DELETE THIS COMMENT
 Briefly describe the scope of this document – how it presents the architecture of this particular enabler.  Include an explanation of how this architecture relates to Organization Name activity.  If it adds clarity, also describe what is not in the scope of this architecture.  DELETE THIS COMMENT
 ```
 
-## Reference
+## References
 
 ```diff
-- Gating Criteria requirement
-- URL to be added
+Todo
 ```
 
 ### Normative References
@@ -55,7 +54,7 @@ Models to use
 
 If there are no entries in the table – enter ‘none’ to be clear.
 
-DELETE THIS COMMENT
+ToDo
 ```
 <table>
   <caption>Normative References </caption>
@@ -86,7 +85,7 @@ Check the version of the Dictionary you are using and update the reference below
 the dictionary is not used.  In general, use the latest available version unless seeking alignment with an
 existing set of specifications.
 
-DELETE THIS COMMENT
+ToDo
 ```
 <table>
   <caption>Informative References </caption>
@@ -104,8 +103,7 @@ Add/Remove references as needed - DELETE This Row
 
 ## Terminology and Conventions
 ```diff
-- Gating Criteria requirement
-- URL to be added
+ToDo
 ```
 
 ### Conventions
@@ -176,7 +174,7 @@ From a market perspective...
 * What problem does this solve?
 * How can this specification be applied?
 * Consider the target audience and provide deployment examples as possible.
-DELETE THIS COMMENT
+ToDo
 ```
 
 ### Version 1.0
@@ -185,7 +183,7 @@ DELETE THIS COMMENT
 This section provides a high level, concise and informative description of the main functionality supported in the initial version of the specification.  The description should be brief, target length should be a few paragraphs.
 When the enabler or reference release is finished, this description should be aligned with the final functionality.
 
-DELETE THIS COMMENT
+ToDo
 ```
 
 ### Version (x.y)
@@ -195,7 +193,7 @@ This section should be included for each new major or minor version of the speci
 
 It should provide a high level, concise and informative description of the new or modified functionality introduced in this version of the specification, compared to the previous version.  The description should be brief, target length should be a few paragraphs.  When the enabler or reference release is finished, this description should be aligned with the final functionality differences.
 
-DELETE THIS COMMENT
+ToDo
 ```
 
 #### Version (x.y.z)
@@ -203,7 +201,7 @@ DELETE THIS COMMENT
 ```
 This section should be included for each new service release of the specification.   It should describe at a high level the main changes made to the specification compared to the previous version.  The description should be brief, target length should be one paragraph.
 
-DELETE THIS COMMENT
+ToDo
 ```
 
 ## Sections As Needed
