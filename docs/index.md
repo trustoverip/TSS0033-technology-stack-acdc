@@ -2,26 +2,25 @@
 
 ## Abstract
 
-Authentic Chained Data Containers (ACDC) Standard Specification provides semantic of authentic provenance chaining of authentic data containers. This semantics include both source provenance and authorization provenance or delegation.
+Authentic Chained Data Containers (ACDC) let formal assertions about data be chained together such that the derivation of any particular datum is traceable back to its source.
 
 ## Status
 Version 1 Draft 01   
 
 ## Motivation
 
-We need a way to chain authentic data together, allowing its provenance to be traced. This is valuable in many use cases:
+Digital signatures let us prove who said what. This is extremely valuable. However, it is often the case that a party who says something is just repeating data that they themselves received from someone else. This indirection may change the reliability of the data, as well as its effects in complex knowledge graphs. Many real-world use cases require us to model this indirection. For example:
 
 * Supply chain, where a valid transfer of custody downstream depends on the validity of all upstream handoffs.
-* Delegation, where a delegate's privileges derive from a chain of authorizations that must extend back to a source that is empowered.
-* Citation of sources (in art, in journalism, in academia, or in credential issuance), where an author wants to clarify that a particular assertion originates elsewhere. This allows the assertion to acquire (or lose) gravitas independent of the reputation of the author who includes it. It also allows analysis of license compliance.
+* Delegation, where a delegate's privileges derive from a chain of authorizations that must extend back to a valid root authority.
+* Statistical inference and legal judgements, where multiple sources of data may assert contradictory facts, and the ability to weigh cumulative evidence is vital.
+* Citation of sources (in art, in journalism, in academia, or in credential issuance), where an author wants to clarify that a particular assertion originates elsewhere. This allows the assertion to acquire (or lose) gravitas independent of the reputation of the author who repeats it, and it lets reusers of data be held accountable for compliance with data sharing constraints.
 
-The last of these examples deserves special comment. There is a tension between the decentralization that we want in a verifiable credential ecosystem, and the way that trust tends to centralize because knowledge and reputation are unevenly distributed. We want anyone to be able to attest to anything they like--but we know that verifiers care very much about the reputation of the parties that make those attestations.
+The last of these examples deserves special comment. There is a tension between the decentralization that we want in a verifiable data ecosystem, and the way that trust tends to centralize because knowledge and reputation are unevenly distributed. We want anyone to be able to attest to anything they like &mdash; but we know that verifiers care deeply about the reputation of the parties that make those attestations.
 
-We could say that verifiers will choose which issuers they trust. This is exactly what most practioners of VCs recommend, and it works in early pilots. However, this places a heavy burden on verifiers, over the long haul--verifiers can't afford to vet every potential issuer of credentials they might encounter. The result will be a tendency to accept credentials only from a short list of issuers, which leads back to centralization.
+We could say that verifiers will choose which issuers they trust. This is exactly what most practitioners of verifiable credentials recommend, and it works fine in early pilots. However, as the complexity of a data ecosystem grows, it doesn't scale; verifiers simply can't afford to vet every potential issuer of credentials they might encounter. (Consider a timely example. Tens of thousands of labs are now issuing COVID test results. No verifier can possibly know them all.) One obvious remedy is to accept credentials only from a short list of issuers, which leads back to centralization. Another remedy is to create a trust registry, where vetted issuers can be looked up. This introduces centralization in a different way.
 
-This tendency also creates problems with delegation. If all delegation has to be validated through a few authorities, a lot of the flexibility and power of delegation is frustrated.
-
-We'd like a landscape where a tiny startup can issue an employment credential with holder attributes taken as seriously as one from a massive global conglomerate--and with no special setup by verifiers to trust them equally. And we'd like parents to be able to delegate childcare decisions to a babysitter on the spur of the moment--and have the babysitter be able to prove it when she calls an ambulance.
+ACDC solves this problem. If employee credentials include a proof that the name of the employee derived from a government-issued passport, then a tiny startup and a global conglomerate with universal brand recognition can both issue employee credentials of equal gravitas  &mdash; and it will require no special setup by verifiers to trust them equally, because the origin of the trusted data, not its proximate source, is what matters.
 
 ## Scope
 
