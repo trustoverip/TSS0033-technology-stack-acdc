@@ -1,3 +1,8 @@
+This repository is obsolete. 
+Current work is happening [here](https://github.com/trustoverip/tswg-acdc-specification)
+
+
+
 # ToIP TSS0033: Technology Stack Authentic Chained Data Container (ACDC) Specification
 - Authors: [Sam Smith](you@github-email) -- email is optional
 - Deliverable Type: *Spec - Technical* 
